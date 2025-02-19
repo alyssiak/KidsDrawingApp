@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Кнопка для выбора шаблона -->
+    <Button
+        android:id="@+id/btnChooseTemplate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выбрать шаблон"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Палитра для рисования -->
+    <LinearLayout
+        android:id="@+id/colorPalette"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp">
+
+        <!-- Пример палитры -->
+        <View
+            android:id="@+id/colorRed"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/holo_red_dark"/>
+
+        <View
+            android:id="@+id/colorGreen"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/holo_green_dark"/>
+
+        <View
+            android:id="@+id/colorBlue"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/holo_blue_dark"/>
+    </LinearLayout>
+
+    <!-- Полотно для рисования -->
+    <com.example.kidsdrawingapp.DrawingView
+        android:id="@+id/drawingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnChooseTemplate"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
